@@ -90,7 +90,8 @@ taskRouter.get(
 
     const tasklistId = req.params.id;
 
-    //This just checks whether the id is a MongoDB id or not. It checks a pattern. A wrong id which matches the pattern would also be accepted here.
+    //This just checks whether the id is a MongoDB id or not. 
+    // It checks a pattern. A wrong id which matches the pattern would also be accepted here.
     if (!isValidObjectId(tasklistId)) {
       return res.status(400).json({ error: "Not a MongoDB Id: task list" });
     }
@@ -159,7 +160,9 @@ taskRouter.delete(
     const taskId = req.params.id;
     const listId = req.headers.tasklist;
 
-    //This just checks whether the id is a MongoDB id or not. It checks a pattern. A wrong id which matches the pattern would also be accepted here.
+    //This just checks whether the id is a MongoDB id or not. 
+    //It checks a pattern. A wrong id which matches the pattern would also be accepted here.
+
     if (!isValidObjectId(taskId)) {
       return res.status(400).json({ error: "Not a MongoDB Id: task" });
     }
@@ -186,10 +189,6 @@ taskRouter.delete(
       }
 
       if (!taskList.tasks.includes(taskId)) {
-        /**The HyperText Transfer Protocol (HTTP) 422 Unprocessable Content response status code
-         * indicates that the server understands the content type of the request entity,
-         * and the syntax of the request entity is correct, but it was unable to process
-         * the contained instructions.-MDN */
         return res.status(422).json({
           message: "Unprocessable Content",
           error:
@@ -255,7 +254,8 @@ taskRouter.put(
       newTask.inMyDay = inMyDay;
     }
 
-    //This just checks whether the id is a MongoDB id or not. It checks a pattern. A wrong id which matches the pattern would also be accepted here.
+    //This just checks whether the id is a MongoDB id or not. 
+    // It checks a pattern. A wrong id which matches the pattern would also be accepted here.
     if (!isValidObjectId(taskId)) {
       return res.status(400).json({ error: "Not a MongoDB Id: task" });
     }

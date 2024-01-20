@@ -1,9 +1,16 @@
+
 const mongoose=require("mongoose");
 
-// require("dotenv").config();
+const DB=process.env.mongoURL;
 
-const connection=mongoose.connect("mongodb+srv://raghuwansh:singh@cluster0.ux37wqw.mongodb.net/TaskMaster?retryWrites=true&w=majority")
+let connection=mongoose.connect(DB,{
+    useUnifiedTopology:true,
+    useNewUrlParser:true
+}).then(()=>console.log("database connected for dipto")).catch((err)=>console.log("err",err))
 
 module.exports={
     connection
 }
+
+
+

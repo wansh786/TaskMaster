@@ -15,11 +15,11 @@ const {GoogleModel}=require("../models/Google")
 
 // require("./db/connection")
 //origin,methods,etc are required for google authentication
-googleRouter.use(cors({
-    origin:"http://localhost:3000",
-    methods:"GET,POST,PUT,DELETE",
-    credentials:true
-}))
+// googleRouter.use(cors({
+//     origin:"http://localhost:3000",
+//     methods:"GET,POST,PUT,DELETE",
+//     credentials:true
+// }))
 
 // app.use(express.json());
 

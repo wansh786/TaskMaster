@@ -1,4 +1,4 @@
-# Taskmaster: A Microsoft To-Do PC App's Fullstack Clone (MERN)
+# Taskmaster: (MERN)
 
 Taskmaster is a clone of the 'Microsoft To-Do' PC application, developed as a fullstack **MERN** application.
 

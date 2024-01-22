@@ -109,7 +109,11 @@ The project depends on the following npm packages:
 
 
 
-
+###Contributors
+-Raghuwansh Kumar Singh
+-Gauri Bidwai
+-Diptajit Das
+-Sandeep Kumar
 
 
 
